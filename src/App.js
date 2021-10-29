@@ -9,11 +9,3 @@ function App() {
 }
 
 export default App;
-
-const styles = {
-  container: {
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column',
-  }
-}

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import FormUserDetails from './FormUserDetails'
+import FormPersonalDetails from './FormPersonalDetails'
+import Confirm from './Confirm'
+import Success from './Success'
 
 const UserForm = () => {
     const [data, setData] = useState({
@@ -53,12 +56,32 @@ const UserForm = () => {
 
         case 2:
             return (
-                <h1>2</h1>
+                <div style={styles.form}>
+                    <FormPersonalDetails 
+                        handleChange={handleChange}
+                        prevStep={prevStep}
+                        nextStep={nextStep}
+                        data={data}
+                    />
+                </div>
             )
 
         case 3:
             return (
-                <h1>3</h1>
+                <div style={styles.form}>
+                    <Confirm 
+                        prevStep={prevStep}
+                        nextStep={nextStep}
+                        data={data}
+                    />
+                </div>
+            )
+
+        case 4:
+            return (
+                <div style={styles.form}>
+                    <Success/>
+                </div>
             )
 
         default:
